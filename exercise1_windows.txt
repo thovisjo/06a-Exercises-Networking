@@ -1,0 +1,75 @@
+'''
+
+To fulfill this exercise, open the Command Prompt (in Windows 10 right-click on the Windows Icon and select Command Prompt (Admin).
+
+Type in the following commands and then copy and paste the results below. Add a sentence of explanation of what you think is going on. 
+
+The ping command will run indefinitely; when it has produced around ten results, you can quit it by pressing ctrl-c
+
+The telnet command will bring up an area where you can type. Type in the following two lines (beginning with GET), followed by a blank line.
+
+If you run into trouble, Google is your friend; there should be a lot of available information on all these programs.
+
+
+
+'''
+----------------------------------
+hostname
+
+
+
+
+----------------------------------
+netstat
+
+
+
+
+----------------------------------
+ipconfig /all
+
+
+
+
+----------------------------------
+nslookup www.iub.edu
+
+
+
+
+----------------------------------
+nslookup www.google.com
+
+
+
+
+----------------------------------
+ping www.iub.edu
+
+
+
+
+----------------------------------
+ping www.google.com
+
+
+
+
+----------------------------------
+tracert www.iub.edu
+
+
+
+
+----------------------------------
+tracert www.google.com
+
+
+
+
+----------------------------------
+telnet esqsoft.com 80
+#once the program opens, type the following followed by a blank line:
+GET /examples/troubleshooting-http-using-telnet.htm HTTP/1.1
+host: esqsoft.com
+
