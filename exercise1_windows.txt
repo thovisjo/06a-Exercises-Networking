@@ -15,13 +15,28 @@ If you run into trouble, Google is your friend; there should be a lot of availab
 '''
 ----------------------------------
 hostname
+DESKTOP-B7MSBD7
 
+I think this is just the name of my computer.
 
 
 
 ----------------------------------
 netstat
+Active Connections
 
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:5354         DESKTOP-B7MSBD7:49668  ESTABLISHED
+  TCP    127.0.0.1:5354         DESKTOP-B7MSBD7:49669  ESTABLISHED
+  TCP    127.0.0.1:27015        DESKTOP-B7MSBD7:58877  ESTABLISHED
+  TCP    127.0.0.1:49668        DESKTOP-B7MSBD7:5354   ESTABLISHED
+  TCP    127.0.0.1:49669        DESKTOP-B7MSBD7:5354   ESTABLISHED
+  TCP    127.0.0.1:58877        DESKTOP-B7MSBD7:27015  ESTABLISHED
+  TCP    149.160.244.154:53711  ec2-52-7-39-223:https  ESTABLISHED
+  TCP    149.160.244.154:53716  db5sch101101907:https  ESTABLISHED
+  TCP    149.160.244.154:53727  162.254.193.7:https    ESTABLISHED
+
+I imagine this lists current connections to the same network or connections through that network to my computer.
 
 
 
@@ -29,42 +44,175 @@ netstat
 ipconfig /all
 
 
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-B7MSBD7
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : indiana.edu
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   Physical Address. . . . . . . . . : D4-81-D7-61-ED-7A
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 70-1C-E7-1E-60-55
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : indiana.edu
+   Description . . . . . . . . . . . : Intel(R) Dual Band Wireless-AC 3165
+   Physical Address. . . . . . . . . : 70-1C-E7-1E-60-54
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:18e8:2:28b7:7cc5:72ed:fa73:7bbe(Preferred)
+   Temporary IPv6 Address. . . . . . : 2001:18e8:2:28b7:81c7:6352:398e:4ced(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::7cc5:72ed:fa73:7bbe%12(Preferred)
+   IPv4 Address. . . . . . . . . . . : 149.160.244.154(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.192.0
+   Lease Obtained. . . . . . . . . . : Tuesday, April 10, 2018 7:13:52 PM
+   Lease Expires . . . . . . . . . . : Tuesday, April 10, 2018 8:46:05 PM
+   Default Gateway . . . . . . . . . : fe80::18e8:2:28b7:1%12
+                                       149.160.192.1
+   DHCP Server . . . . . . . . . . . : 10.79.1.224
+   DHCPv6 IAID . . . . . . . . . . . : 108010727
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-F5-B5-B4-D4-81-D7-61-ED-7A
+   DNS Servers . . . . . . . . . . . : 10.79.1.1
+                                       10.234.220.20
+                                       10.79.1.2
+   Primary WINS Server . . . . . . . : 129.79.1.200
+   Secondary WINS Server . . . . . . : 129.79.5.200
+                                       134.68.220.14
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 70-1C-E7-1E-60-58
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Teredo Tunneling Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+
+This is a long list of stuff all related to connections and addresses, I think. 
 
 
 ----------------------------------
 nslookup www.iub.edu
 
+Server:  ns6.iu.edu
+Address:  10.79.1.1
 
+Name:    www.iub.edu
+Addresses:  129.79.78.186
+          129.79.78.185
 
+This gives the ip addresses associated with the website.
 
 ----------------------------------
 nslookup www.google.com
 
+Server:  ns6.iu.edu
+Address:  10.79.1.1
 
+Non-authoritative answer:
+Name:    www.google.com
+Addresses:  2607:f8b0:4009:808::2004
+          172.217.4.100
+
+This one is non-authoratative, meaning it could be wrong? 
 
 
 ----------------------------------
 ping www.iub.edu
 
+Pinging www.iub.edu [129.79.78.186] with 32 bytes of data:
+Reply from 129.79.78.186: bytes=32 time=272ms TTL=61
+Reply from 129.79.78.186: bytes=32 time=2ms TTL=61
+Reply from 129.79.78.186: bytes=32 time=3ms TTL=61
+Reply from 129.79.78.186: bytes=32 time=3ms TTL=61
 
+Ping statistics for 129.79.78.186:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 272ms, Average = 70ms
+
+Checks how quickly, if at all, the website responds.
 
 
 ----------------------------------
 ping www.google.com
 
+Pinging www.google.com [2607:f8b0:4009:802::2004] with 32 bytes of data:
+Request timed out.
+Reply from 2607:f8b0:4009:802::2004: time=9ms
+Reply from 2607:f8b0:4009:802::2004: time=10ms
+Reply from 2607:f8b0:4009:802::2004: time=10ms
+
+Ping statistics for 2607:f8b0:4009:802::2004:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 9ms, Maximum = 10ms, Average = 9ms
 
 
+this does  the same as above.
 
 ----------------------------------
 tracert www.iub.edu
 
+Tracing route to www.iub.edu [129.79.78.186]
+over a maximum of 30 hops:
 
+  1     2 ms     1 ms     1 ms  149.160.192.2
+  2     3 ms     2 ms     2 ms  ae-15.0.br2.bldc.net.uits.iu.edu [134.68.3.74]
+  3     3 ms     2 ms     4 ms  ae-33.932.dcr3.bldc.net.uits.iu.edu [134.68.3.129]
+  4     3 ms     2 ms     2 ms  zeus1-iub.gateway.indiana.edu [129.79.78.186]
+
+This finds each connection along the way. 
 
 
 ----------------------------------
 tracert www.google.com
+Tracing route to www.google.com [2607:f8b0:4009:802::2004]
+over a maximum of 30 hops:
 
+  1     2 ms     9 ms     2 ms  ae-20.2231.cr5.bldc.net.uits.iu.edu [2001:18e8:2:28b7::2]
+  2     3 ms     2 ms     2 ms  ae-15.0.br2.bldc.net.uits.iu.edu [2001:18e8:3:f016::2]
+  3     5 ms     4 ms     4 ms  2001:18e8:ff00:90::1
+  4     5 ms     4 ms     4 ms  2001:18e8:ff00:13::1
+  5     8 ms     8 ms     8 ms  2001:18e8:ffff:10::1
+  6    10 ms     9 ms     9 ms  2001:18e8:ffff:10::2
+  7    10 ms     9 ms     9 ms  google-peer-equinix.wiscnet.net [2001:4e0:0:310d::2]
+  8    10 ms    13 ms     9 ms  2001:4860:0:1010::1
+  9     9 ms    11 ms     8 ms  2001:4860:0:1::1f31
+ 10     9 ms    11 ms     9 ms  ord37s07-in-x04.1e100.net [2607:f8b0:4009:802::2004]
 
+Trace complete.
+
+Same as above.
 
 
 ----------------------------------
@@ -73,3 +221,4 @@ telnet esqsoft.com 80
 GET /examples/troubleshooting-http-using-telnet.htm HTTP/1.1
 host: esqsoft.com
 
+This one did not work for me. 'telnet is not recognizes as an internal or external command, operable program or batch file'
